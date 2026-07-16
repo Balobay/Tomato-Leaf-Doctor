@@ -1,0 +1,208 @@
+/* =====================================================================
+   Tomato Leaf Doctor — Stylesheet
+   ===================================================================== */
+
+:root {
+    --green-dark: #1b5e20;
+    --green: #2e7d32;
+    --green-mid: #558b2f;
+    --green-soft: #eef4ea;
+    --red: #c62828;
+    --text-main: #1b2b1c;
+    --text-soft: #4b5a4c;
+    --card-bg: #ffffff;
+    --card-border: #e6ece2;
+}
+
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header[data-testid="stHeader"] {background: transparent;}
+
+html, body, [class*="css"] { font-family: "Segoe UI", -apple-system, sans-serif; }
+
+.stApp {
+    background: radial-gradient(circle at 10% 0%, #f4f9ef 0%, #fbfaf7 45%, #fdf6f1 100%);
+    color: var(--text-main);
+}
+
+
+.main .block-container p,
+.main .block-container li,
+.main .block-container span,
+.main .block-container label,
+.main .block-container h1,
+.main .block-container h2,
+.main .block-container h3,
+.main .block-container h4,
+.main .block-container h5 {
+    color: var(--text-main);
+}
+
+.block-container {
+    padding-top: 1.6rem;
+    max-width: 1180px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 2.4rem 2.4rem;
+    border-radius: 22px;
+    background: linear-gradient(120deg, #1b5e20 0%, #2e7d32 45%, #ef6c00 130%);
+    color: #ffffff !important;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 14px 34px rgba(27, 94, 32, 0.28);
+}
+.hero * { color: #ffffff !important; }
+.hero h1 {
+    font-size: 2.15rem;
+    margin-bottom: 0.35rem;
+    font-weight: 800;
+}
+.hero p {
+    font-size: 1.03rem;
+    opacity: 0.96;
+    margin: 0;
+    max-width: 640px;
+}
+.hero .hero-emoji {
+    position: absolute;
+    right: 1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5.2rem;
+    opacity: 0.22;
+}
+
+/* ---------- SECTION LABELS ---------- */
+.section-label {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main) !important;
+    margin: 0 0 0.7rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+/* ---------- GENERIC CARD ---------- */
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 1.3rem 1.5rem;
+    box-shadow: 0 4px 18px rgba(27, 94, 32, 0.06);
+    border: 1px solid var(--card-border);
+    margin-bottom: 1.1rem;
+    color: var(--text-main) !important;
+}
+.card * { color: var(--text-main) !important; }
+.card.info-card {
+    background: linear-gradient(120deg, #eef6ee 0%, #f5faf1 100%);
+    border-left: 5px solid var(--green);
+}
+.card.tips-card {
+    background: #fff9ec;
+    border-left: 5px solid #f9a825;
+}
+.card ul { margin: 0.4rem 0 0 0; padding-left: 1.2rem; }
+.card li { margin-bottom: 0.4rem; line-height: 1.55; }
+
+/* ---------- RESULT CARDS ---------- */
+.result-card-sehat, .result-card-sakit {
+    border-radius: 18px;
+    padding: 1.6rem 1.8rem;
+    margin-bottom: 1.1rem;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.07);
+}
+.result-card-sehat * , .result-card-sakit * { color: var(--text-main) !important; }
+.result-card-sehat {
+    background: linear-gradient(120deg, #e8f5e9 0%, #f4faf0 100%);
+    border-left: 6px solid var(--green);
+}
+.result-card-sakit {
+    background: linear-gradient(120deg, #fff3e0 0%, #fdecea 100%);
+    border-left: 6px solid var(--red);
+}
+.result-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    margin: 0.5rem 0 0.15rem 0;
+}
+.result-conf {
+    font-size: 0.98rem;
+    color: var(--text-soft) !important;
+    margin-bottom: 0.7rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+}
+.badge-sehat { background:#c8e6c9; color:#1b5e20 !important; }
+.badge-sakit { background:#ffcdd2; color:#b71c1c !important; }
+
+.steps li { margin-bottom: 0.4rem; line-height: 1.55; }
+
+/* ---------- SIDEBAR ---------- */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #163c1a 0%, #0f2a12 100%);
+}
+section[data-testid="stSidebar"] * {
+    color: #eef6ec !important;
+}
+section[data-testid="stSidebar"] hr {
+    border-color: rgba(255,255,255,0.15);
+}
+
+/* ---------- DROPZONE / FILE UPLOADER ---------- */
+div[data-testid="stFileUploaderDropzone"] {
+    border: 2.5px dashed #7cb342 !important;
+    border-radius: 18px !important;
+    background: linear-gradient(180deg, #f6fbf1 0%, #eef7e6 100%) !important;
+    padding: 1.6rem !important;
+    transition: all 0.2s ease-in-out;
+}
+div[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: var(--green) !important;
+    background: #eaf5e2 !important;
+    box-shadow: 0 0 0 4px rgba(46,125,50,0.08);
+}
+div[data-testid="stFileUploaderDropzone"] * {
+    color: var(--text-main) !important;
+}
+div[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    fill: var(--green) !important;
+}
+
+.uw-sub {
+    color: var(--text-soft) !important;
+    font-size: 0.92rem;
+    margin-bottom: 0.9rem;
+}
+
+/* Tab styling */
+button[data-baseweb="tab"] {
+    font-weight: 700 !important;
+}
+
+/* Preview image rounding */
+div[data-testid="stImage"] img {
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* Dataframe & bar chart container */
+div[data-testid="stDataFrame"], div[data-testid="stVerticalBlockBorderWrapper"] {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Alerts (fallback, in case native st.info/error still used) */
+div[data-testid="stAlert"] * { color: var(--text-main) !important; }
+
+hr { border-color: var(--card-border); }

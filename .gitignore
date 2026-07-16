@@ -1,0 +1,27 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter notebook checkpoints & source notebooks (tidak perlu untuk deploy)
+.ipynb_checkpoints/
+*.ipynb
+
+# Folder training/eksperimen yang tidak dipakai app.py
+TLD/
+models/
+
+# File OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Log & cache lain
+*.log
+
+allpiplist.txt
